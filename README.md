@@ -1,3 +1,20 @@
+# StackTok
+
+Code for **StackTok: Accelerating VLMs Inference with Budget-Adaptive Visual Token Selection**.
+
+**Authors:** Zhenbin Wang, Lei Zhang, Lituan Wang, Wei Huang, Yan Wang, Zhenwei Zhang<br>
+**Affiliation:** Sichuan University<br>
+**Corresponding author:** Lei Zhang<br>
+**Contact:** [wangzhenbin@stu.scu.edu.cn](mailto:wangzhenbin@stu.scu.edu.cn)
+
+StackTok provides budget-adaptive visual token selection for vision-language models. This repository includes the core selector, integrations for LLaVA and Qwen2.5-VL, and adapters for evaluation with `lmms-eval`.
+
+## Framework
+
+[![StackTok framework](docs/images/framework.png)](docs/images/framework.pdf)
+
+A size-indexed support target gates relevance-oriented and coverage-oriented token selection. High-resolution crops share a token budget, followed by optional support-preserving swap refinement. Click the figure to view the original PDF from the paper.
+
 ## Contents
 
 ```text
@@ -8,9 +25,17 @@ stacktok/
 adapters/     lmms-eval model adapters
 scripts/      adapter installer
 tests/        deterministic selector tests
+docs/images/  framework figure from the paper
 ```
 
-## Install
+## Environment Setup
+
+Python 3.10 or later is required. Clone the repository and enter its root directory:
+
+```bash
+git clone https://github.com/wongzbb/StackToK.git
+cd StackToK
+```
 
 Core package and tests:
 
@@ -55,7 +80,7 @@ indices, selected_tokens, diagnostics = selector.stacktok_single(
 )
 ```
 
-## lmms-eval
+## Evaluation with lmms-eval
 
 Install the adapters first, then provide the checkpoint explicitly.
 
