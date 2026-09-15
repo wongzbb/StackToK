@@ -2,11 +2,6 @@
 
 Code for **StackTok: Accelerating VLMs Inference with Budget-Adaptive Visual Token Selection**.
 
-**Authors:** Zhenbin Wang, Lei Zhang, Lituan Wang, Wei Huang, Yan Wang, Zhenwei Zhang<br>
-**Affiliation:** Sichuan University<br>
-**Corresponding author:** Lei Zhang<br>
-**Contact:** [wangzhenbin@stu.scu.edu.cn](mailto:wangzhenbin@stu.scu.edu.cn)
-
 StackTok provides budget-adaptive visual token selection for vision-language models. This repository includes the core selector, integrations for LLaVA and Qwen2.5-VL, and adapters for evaluation with `lmms-eval`.
 
 ## Framework
