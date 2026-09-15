@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stacktok"
+version = "0.1.0"
+description = "StackTok vision-token selection"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "loguru>=0.7",
+    "torch>=2.0",
+]
+
+[project.optional-dependencies]
+qwen = [
+    "transformers>=4.50",
+    "qwen-vl-utils",
+]
+eval = [
+    "accelerate",
+    "lmms-eval",
+    "numpy",
+    "packaging",
+    "pillow",
+    "tqdm",
+]
+test = [
+    "pytest>=7",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["stacktok*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
