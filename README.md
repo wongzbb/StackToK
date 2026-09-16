@@ -1,16 +1,14 @@
-# StackTok
+<div id="top" align="center">
 
-Code for **StackTok: Accelerating VLMs Inference with Budget-Adaptive Visual Token Selection**.
+# StackTok: Accelerating VLMs Inference with Budget-Adaptive Visual Token Selection
+  
+  [![arXiv](https://img.shields.io/badge/arXiv-2406.15910-b31b1b.svg)](http://arxiv.org/abs/2609.16841)
 
-StackTok provides budget-adaptive visual token selection for vision-language models. This repository includes the core selector, integrations for LLaVA and Qwen2.5-VL, and adapters for evaluation with `lmms-eval`.
-
-## Framework
+</div>
 
 [![StackTok framework](docs/images/framework.png)](docs/images/framework.pdf)
 
 A size-indexed support target gates relevance-oriented and coverage-oriented token selection. High-resolution crops share a token budget, followed by optional support-preserving swap refinement. Click the figure to view the original PDF from the paper.
-
-## Contents
 
 ```text
 stacktok/
